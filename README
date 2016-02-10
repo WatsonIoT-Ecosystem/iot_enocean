@@ -1,40 +1,59 @@
-enoceaniot version 0.01
-=======================
+# Watson IoT – EnOcean Gateway client – Introduction
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
+Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+# Dependencies
+[Watson IOT Embedded C client](https://github.com/ibm-messaging/iotf-embeddedc)
 
-INSTALLATION
+# Watson IoT – EnOcean Gateway client
 
-To install this module type the following:
+### Hardware requirements:
+* Raspberry Pi - 2 (model 1 is also expected to work, but recipe not tested on it)
+* EnOcean kit containing devices and the EnOcean receiver preferably USB300 which was used for testing this recipe.
+### Software requirements:
+* Fhem server 5.7 (Last released version: as of 2015-11-15) installed on Raspberry Pi.
+* Perl interpreter
+  >We will need “perlxs” to build our gateway. To ensure that we can build perlxs modules check for “xsubpp” executable in “bin” directory of your device Perl installation.  
+**Note:** In case Perl is not installed on Raspberry Pi (to check type perl -v on Raspberry Pi command line), use the below commands to install Perl  
+  * sudo apt-get install perl libdevice-serialport-perl libio-socket-ssl-perl libwww-perl 
+  * sudo apt-get install –f 
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+  >**Note:** It is recommended that you go through the section “Raspberry PI with EnOcean” at http://fhem.de/fhem.html#Links to ensure you have latest information about setting up Fhem with Raspbeery Pi and EnOcean.  
+  
+* IBM Watson IoT Embedded 'C' client libraries.  
+  Link to source code:  https://github.com/ibm-messaging/iotf-embeddedc
 
-DEPENDENCIES
+# Steps to build Watson IoT – EnOcean Gateway client
 
-This module requires these other modules and libraries:
+### Building the Watson IoT Embedded 'C' client library  
+* Download/Clone the repository using the link https://github.com/ibm-messaging/iotf-embeddedc
+* Run buildlib.sh supplied to build Watson IoT client shared library “libiotf.so”.
 
-  blah blah blah
+### Building Watson IoT – EnOcean gateway library
 
-COPYRIGHT AND LICENCE
+* Download/Clone the repository using the link https://github.com/WatsonIoT-Ecosystem/iot_enocean
+* Change to the directory where you downloaded the contents in step above. This should be the directory where Makefile.PL resides.
+* Run the following commands in sequence  
+**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
+   * sudo perl Makefile.PL
+     * This will generate the Makefile needed to build the code
+   * sudo make
+     * This will generate a new shared library named “enoceaniot.so”
+   * sudo make install	
+     * This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
+       <b>Example output:  
+       <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
+<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
+<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.so  
+<i>Installing /usr/local/lib/perl/5.14.2/enoceaniot.pm  
+<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix  
+<i>Installing /usr/local/man/man3/enoceaniot.3pm  
+<i>Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod  
 
-Put the correct copyright and licence information here.
+* Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib. 
+* Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.   
 
-Copyright (C) 2016 by A. U. Thor
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.14.2 or,
-at your option, any later version of Perl 5 you may have available.
+**On completion:** You will have the all the required libraries built and installed at appropriate location.  
+To verify run the command *define <some name> ENOCEANIOT* on telnet command line. No error verifies that everything went successfully.
 
 
