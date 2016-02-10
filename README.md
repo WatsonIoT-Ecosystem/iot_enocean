@@ -37,12 +37,12 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 * Run the following commands in sequence  
 **Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
    * sudo perl Makefile.PL  
-        ~ This will generate the Makefile needed to build the code
+        This will generate the Makefile needed to build the code
    * sudo make  
-        ~ This will generate a new shared library named “enoceaniot.so”
+        This will generate a new shared library named “enoceaniot.so”
    * sudo make install	
-        ~ This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
-              ~ <b>Example output:</b>  
+        This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
+              <b>Example output:</b>  
        <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.so  
@@ -54,7 +54,7 @@ Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i>
 * Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib. 
 * Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.   
 
-~ **On completion:** You will have the all the required libraries built and installed at appropriate location.  
+ **On completion:** You will have the all the required libraries built and installed at appropriate location.  
 To verify run the command *define <some name> ENOCEANIOT* on telnet command line. No error verifies that everything went successfully.
 
 
