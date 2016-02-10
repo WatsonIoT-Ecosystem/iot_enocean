@@ -36,24 +36,26 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
 * Change to the directory where you downloaded the contents in step above. This should be the directory where Makefile.PL resides.
 * Run the following commands in sequence  
-**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
+
    * sudo perl Makefile.PL  
         This will generate the Makefile needed to build the code
    * sudo make  
         This will generate a new shared library named “enoceaniot.so”
    * sudo make install	
         This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
-         <b>Example output:</b>  
+         <font size="2"> <b>Example output:</b>  
        <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.so  
 Installing /usr/local/lib/perl/5.14.2/enoceaniot.pm  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix  
 Installing /usr/local/man/man3/enoceaniot.3pm  
-Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i>  
-
-* Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib. 
-* Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.   
+Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i></font>  
+  
+* Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib.  
+**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
+* Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.  
+**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 
   **On completion:** You will have the all the required libraries built and installed at appropriate location.  
 To verify run the command *define <some name> ENOCEANIOT* on telnet command line. No error verifies that everything went successfully.
