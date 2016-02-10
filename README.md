@@ -15,11 +15,11 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 * Fhem server 5.7 (Last released version: as of 2015-11-15) installed on Raspberry Pi.
 * Perl interpreter
   >We will need “perlxs” to build our gateway. To ensure that we can build perlxs modules check for “xsubpp” executable in “bin” directory of your device Perl installation.  
-**Note:** In case Perl is not installed on Raspberry Pi (to check type perl -v on Raspberry Pi command line), use the below commands to install Perl  
+`Note:` In case Perl is not installed on Raspberry Pi (to check type perl -v on Raspberry Pi command line), use the below commands to install Perl  
   * sudo apt-get install perl libdevice-serialport-perl libio-socket-ssl-perl libwww-perl 
   * sudo apt-get install –f 
 
-  >**Note:** It is recommended that you go through the section “Raspberry PI with EnOcean” at http://fhem.de/fhem.html#Links to ensure you have latest information about setting up Fhem with Raspbeery Pi and EnOcean.  
+  >`Note:` It is recommended that you go through the section “Raspberry PI with EnOcean” at http://fhem.de/fhem.html#Links to ensure you have latest information about setting up Fhem with Raspbeery Pi and EnOcean.  
   
 * IBM Watson IoT Embedded 'C' client libraries.  
   Link to source code:  https://github.com/ibm-messaging/iotf-embeddedc
@@ -53,11 +53,11 @@ Installing /usr/local/man/man3/enoceaniot.3pm
 Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i></font>  
   
 * Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib.  
-**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
+`Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 * Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.  
-**Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
+`Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 
-  `On completion:` You will have the all the required libraries built and installed at appropriate location.  
+`**On completion:**` You will have the all the required libraries built and installed at appropriate location.  
 To verify run the command *define testObj ENOCEANIOT* on telnet command line. No error verifies that everything went successfully.
 
 
