@@ -42,14 +42,14 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
      * This will generate a new shared library named “enoceaniot.so”
    * sudo make install	
      * This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
-       <b>Example output:  
+       <b>Example output:</b>  
        <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
-<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
-<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.so  
-<i>Installing /usr/local/lib/perl/5.14.2/enoceaniot.pm  
-<i>Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix  
-<i>Installing /usr/local/man/man3/enoceaniot.3pm  
-<i>Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod  
+Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
+Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.so  
+Installing /usr/local/lib/perl/5.14.2/enoceaniot.pm  
+Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix  
+Installing /usr/local/man/man3/enoceaniot.3pm  
+Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i>  
 
 * Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib. 
 * Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.   
