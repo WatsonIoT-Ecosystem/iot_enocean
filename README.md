@@ -27,10 +27,10 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 ## Steps to build Watson IoT–EnOcean Gateway client
 
 ### Downloading the source code  
-* Clone the Watson IoT–EnOcean gateway repository using command *git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean*  
-`    ` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
+* Clone the Watson IoT–EnOcean gateway repository using command **git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean**  
+`   -` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
 * Change to directory *iot-enocean* and run the script *getiotfc.sh*  
-`    ` This will create a directory *gtw* in your parent directory. 
+`   -` This will create a directory *gtw* in your parent directory and clone the Watson IoT Embedded 'C' client repository into it.
 **`Note:`** It is important that directory *gtw* is created in the same directory as *iot-enocean*
 
 ### Building the Watson IoT Embedded 'C' client library  
@@ -45,11 +45,11 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 * Run the following commands in sequence  
 
    * sudo perl Makefile.PL  
-        This will generate the Makefile needed to build the code
+        `   -` This will generate the Makefile needed to build the code
    * sudo make  
-        This will generate a new shared library named “enoceaniot.so”
+        `   -` This will generate a new shared library named “enoceaniot.so”
    * sudo make install	
-        This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
+        `   -` This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
           * <b>Example output:</b>  
        <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
@@ -59,9 +59,9 @@ Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix
 Installing /usr/local/man/man3/enoceaniot.3pm  
 Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i></font>  
   
-* Copy the Watson IoT Embedded 'C' client library “libiotf.so” to /usr/lib.  
+* Copy the Watson IoT Embedded 'C' client library *libiotf.so* from to /usr/lib.  
 `Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
-* Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.  
+* Copy file *98_ENOCEANIOT.pm* to /opt/fhem/FHEM directory. This is the directory where Fhem will install by default.
 `Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 
 **`On completion:`** You will have the all the required libraries built and installed at appropriate location.  
