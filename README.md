@@ -57,7 +57,7 @@ Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i></fon
 * Copy 98_ENOCEANIOT.pm to /opt/fhem/FHEM directory. This is the directory where you installed Fhem by degault.  
 `Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 
-`**On completion:**` You will have the all the required libraries built and installed at appropriate location.  
+**`On completion:`** You will have the all the required libraries built and installed at appropriate location.  
 To verify run the command *define testObj ENOCEANIOT* on telnet command line. No error verifies that everything went successfully.
 
 
