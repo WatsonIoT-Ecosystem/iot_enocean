@@ -28,9 +28,9 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
 ### Downloading the source code  
 * Clone the Watson IoT–EnOcean gateway repository using command **git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean**  
-`   -` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
+`   ` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
 * Change to directory *iot-enocean* and run the script *getiotfc.sh*  
-`   -` This will create a directory *gtw* in your parent directory and clone the Watson IoT Embedded 'C' client repository into it.
+`   ` This will create a directory *gtw* in your parent directory and clone the Watson IoT Embedded 'C' client repository into it.  
 **`Note:`** It is important that directory *gtw* is created in the same directory as *iot-enocean*
 
 ### Building the Watson IoT Embedded 'C' client library  
@@ -45,11 +45,11 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 * Run the following commands in sequence  
 
    * sudo perl Makefile.PL  
-        `   -` This will generate the Makefile needed to build the code
+        `   ` This will generate the Makefile needed to build the code
    * sudo make  
-        `   -` This will generate a new shared library named “enoceaniot.so”
+        `   ` This will generate a new shared library named “enoceaniot.so”
    * sudo make install	
-        `   -` This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
+        `   ` This command will copy the various files and shared library “enoceaniot.so” to appropriate directories in the Perl installation.  
           * <b>Example output:</b>  
        <i>Files found in blib/arch: installing files in blib/lib into architecture dependent library tree  
 Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/enoceaniot.bs  
