@@ -10,6 +10,7 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 ### Hardware requirements:
 * Raspberry Pi - 2 (model 1 is also expected to work, but recipe not tested on it)
 * EnOcean kit containing devices and the EnOcean receiver preferably USB300 which was used for testing this recipe.
+
 ### Software requirements:
 * Fhem server 5.7 (Last released version: as of 2015-11-15) installed on Raspberry Pi.
 * Perl interpreter
