@@ -32,7 +32,8 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
 ### Building Watson IoT–EnOcean gateway library
 
-* Download/Clone the repository using the link https://github.com/WatsonIoT-Ecosystem/iot_enocean
+* Download/Clone the repository using the link https://github.com/WatsonIoT-Ecosystem/iot_enocean  
+
 * Change to the directory where you downloaded the contents in step above. This should be the directory where Makefile.PL resides.
 * Run the following commands in sequence  
 **Note:** you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
