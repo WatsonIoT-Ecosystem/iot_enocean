@@ -26,15 +26,22 @@ Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
 ## Steps to build Watson IoT–EnOcean Gateway client
 
+### Downloading the source code  
+* Clone the Watson IoT–EnOcean gateway repository using command *git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean*  
+`    ` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
+* Change to directory *iot-enocean* and run the script *getiotfc.sh*  
+`    ` This will create a directory *gtw* in your parent directory. 
+**`Note:`** It is important that directory *gtw* is created in the same directory as *iot-enocean*
+
 ### Building the Watson IoT Embedded 'C' client library  
-* Download/Clone the repository using the link https://github.com/ibm-messaging/iotf-embeddedc
-* Run buildlib.sh supplied to build Watson IoT client shared library “libiotf.so”.
+
+* Change to directory *gtw*
+* Run *buildlib.sh* to build Watson IoT client shared library “libiotf.so”.
 
 ### Building Watson IoT–EnOcean gateway library
 
-* Download/Clone the repository using the link https://github.com/WatsonIoT-Ecosystem/iot_enocean  
+* Change to directory *iot-enocean*. This is the directory where Makefile.PL resides.  
 
-* Change to the directory where you downloaded the contents in step above. This should be the directory where Makefile.PL resides.
 * Run the following commands in sequence  
 
    * sudo perl Makefile.PL  
