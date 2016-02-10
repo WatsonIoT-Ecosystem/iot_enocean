@@ -1,0 +1,6 @@
+Revision history for Perl extension enoceaniot.
+
+0.01  Mon Feb  8 06:55:39 2016
+	- original version; created by h2xs 1.23 with options
+		-O -n enoceaniot ./gtw/gatewayclient.h
+
