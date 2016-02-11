@@ -2,6 +2,10 @@
 
 Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
+## How to use - Recipe  
+
+Refer recipe ... for detailed information on how to use this source code.
+
 ## Dependencies
 [Watson IOT Embedded C client](https://github.com/ibm-messaging/iotf-embeddedc)
 
