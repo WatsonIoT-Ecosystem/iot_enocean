@@ -2,7 +2,7 @@
 
 Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
 
-## How to use - Recipe  
+## How to use  
 
 Refer recipe ... for detailed information on how to use this source code.
 
