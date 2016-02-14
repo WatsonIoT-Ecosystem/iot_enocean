@@ -1,10 +1,10 @@
-# Watson IoT–EnOcean Gateway client – Introduction
+# Watson IoT Gateway for EnOcean – Introduction
 
-Gateway to push EnOcean sensor data to Watson IoT platform using Raspberry Pi.
+Gateway to integrate EnOcean devices to Watson IoT platform.
 
 ## How to use  
 
-Refer recipe ... for detailed information on how to use this source code.
+Refer recipe ... for detailed information on how to use this source code. In short this code runs inside the Fhem process enabling Fhem to call Watson IoT embedded 'C' client API's.
 
 ## Dependencies
 [Watson IOT Embedded C client](https://github.com/ibm-messaging/iotf-embeddedc)
@@ -28,10 +28,10 @@ Refer recipe ... for detailed information on how to use this source code.
 * IBM Watson IoT Embedded 'C' client libraries.  
   Link to source code:  https://github.com/ibm-messaging/iotf-embeddedc
 
-## Steps to build Watson IoT–EnOcean Gateway client
+## Steps to build Watson IoT Gateway for EnOcean
 
 ### Downloading the source code  
-* Clone the Watson IoT–EnOcean gateway repository using command **git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean**  
+* Clone the Watson IoT gateway repository using command **git clone https://github.com/WatsonIoT-Ecosystem/iot_enocean.git iot-enocean**  
 `   ` This will create a directory *iot-enocean* in your current directory containing all the source code needed for building the gateway.
 * Change to directory *iot-enocean* and run the script *getiotfc.sh*  
 `   ` This will create a directory *gtw* in your parent directory and clone the Watson IoT Embedded 'C' client repository into it.  
@@ -42,7 +42,7 @@ Refer recipe ... for detailed information on how to use this source code.
 * Change to directory *gtw*
 * Run *buildlib.sh* to build Watson IoT client shared library “libiotf.so”.
 
-### Building Watson IoT–EnOcean gateway library
+### Building Watson IoT gateway library
 
 * Change to directory *iot-enocean*. This is the directory where Makefile.PL resides.  
 
