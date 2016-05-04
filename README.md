@@ -40,7 +40,7 @@ Refer recipe ... for detailed information on how to use this source code. In sho
 ### Building the Watson IoT Embedded 'C' client library  
 
 * Change to directory *gtw*
-* Run *buildlib.sh* to build Watson IoT client shared library “libiotf.so”.
+* Run *buildlib.sh* to build Watson IoT Embedded 'C' client shared library “libiotf.so”.
 
 ### Building Watson IoT gateway library
 
@@ -63,7 +63,7 @@ Installing /usr/local/lib/perl/5.14.2/auto/enoceaniot/autosplit.ix
 Installing /usr/local/man/man3/enoceaniot.3pm  
 Appending installation info to /usr/local/lib/perl/5.14.2/perllocal.pod</i></font>  
   
-* Copy the Watson IoT Embedded 'C' client library *libiotf.so* from to /usr/lib.  
+* Copy the Watson IoT Embedded 'C' client library *libiotf.so* from gtw/build that you just built to /usr/lib.  
 `Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
 * Copy file *98_ENOCEANIOT.pm* to /opt/fhem/FHEM directory. This is the directory where Fhem will install by default.
 `Note:` you will need root privileges to do this. On Raspberry pi use “sudo cp ….” to do this copy as root.
