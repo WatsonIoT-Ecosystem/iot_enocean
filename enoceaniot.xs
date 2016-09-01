@@ -4,7 +4,7 @@
 
 #include "ppport.h"
 
-#include <../gtw/gatewayclient.h>
+#include <gatewayclient.h>
 
 #include "const-c.inc"
 
@@ -23,7 +23,7 @@ initializegateway(orgid,gwtype,gwid,authmtd,authtkn)
         char *authmtd
         char *authtkn
         CODE:
-        RETVAL = initializeGateway(&client,orgid,gwtype,gwid,authmtd,authtkn);
+        RETVAL = initializeGateway(&client,orgid,NULL,gwtype,gwid,authmtd,authtkn);
         OUTPUT:
         RETVAL
 
