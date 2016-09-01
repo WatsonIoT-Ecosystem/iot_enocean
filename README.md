@@ -40,11 +40,13 @@ Refer recipe ... for detailed information on how to use this source code. In sho
 ### Building the Watson IoT Embedded 'C' client library  
 
 * Change to directory *gtw*
+* Run *setup.sh* to download the dependencies
+* Change to directory *gtw/src*
 * Run *buildlib.sh* to build Watson IoT Embedded 'C' client shared library “libiotf.so”.
 
 ### Building Watson IoT gateway library
 
-* Change to directory *iot-enocean*. This is the directory where Makefile.PL resides.  
+* Change back to directory *iot-enocean*. This is the directory where Makefile.PL resides.  
 
 * Run the following commands in sequence  
 
