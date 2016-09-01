@@ -42,7 +42,8 @@ Refer recipe ... for detailed information on how to use this source code. In sho
 * Change to directory *gtw*
 * Run *setup.sh* to download the dependencies
 * Change to directory *gtw/src*
-* Run *buildlib.sh* to build Watson IoT Embedded 'C' client shared library “libiotf.so”. This will create a *build* directory in *gtw/src* containing libiotf.so.
+* Run *buildlib.sh* to build Watson IoT Embedded 'C' client shared library “libiotf.so”.
+`   ` This will create a directory *build* in *gtw/src*, containing libiotf.so.
 
 ### Building Watson IoT gateway library
 
